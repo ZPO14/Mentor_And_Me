@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Mentor&Me - Login page</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+<script>
+  window.onload=function()
+{
+
+  document.getElementById("sendButton").onclick=processForm;
+}
+function processForm()
+{
+  var ChatInput=document.getElementById("chatInput").value;
+
+ var output=document.getElementsByClassName("messagesPanel");
+  output[0].innerHTML="I said" + " : " +ChatInput;
+}
+
+
+</script>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1><a href="index.html">Mentor<span class="logo_colour">&Me</span></a></h1>
+                </div>
+            </div>
+            <div id="menubar">
+                <ul id="menu">
+                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="create.html">Create</a></li>
+                    <li class="selected"><a href="chat.html">Chat</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content_header"></div>
+        <div id="content">
+            <div class="menu">
+            </div>
+        </div>
+
+        <div class="contentContainer">
+            <div id="chatPanel" class="contentPanel chatPanel">
+                <div id="messagesPanel" class="messagesPanel">
+                </div>
+                <div id="chatInputPanel" class="chatInputPanel">
+                    <div style="flex: 1">
+                        <textarea id="chatInput" class="chatInput" placeholder="Type your message here..."></textarea>
+                    </div>
+                    <div>
+                        <img id="sendButton" class="sendButton" src="send.png">
+                    </div>
+                </div>
+            </div>
+
+            <div id="content_footer"></div>
+
+        </div>
+</body>
+</html>

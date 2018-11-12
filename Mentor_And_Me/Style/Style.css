@@ -1,0 +1,338 @@
+﻿html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: normal .80em 'trebuchet ms', arial, sans-serif;
+    background: #F0EFE2;
+    color: #777;
+    text-align: left;
+    height: 100%;
+}
+
+.contentContainer {
+    flex: 1;
+    margin: 5px;
+}
+
+.contentPanel {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    border: 1px solid gray;
+    border-radius: 25px;
+}
+
+.messagesPanel {
+    overflow-y: scroll;
+    margin-top: 50px;
+    flex: 1;
+}
+
+.chatPanel {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatInputPanel {
+    height: 60px;
+    margin-top: 10px;
+    border-top: 1px solid #bbbbbb;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+.chatInput {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+}
+
+#projectcreation {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#projectNameTextBox {
+    width: 250px;
+}
+
+#projectdesciptiondiv {
+    margin-top: 25px;
+}
+
+#projectDesciptionTextArea {
+    width: 500px;
+    height: 120px;
+    word-wrap: break-word;
+}
+
+#projectsizediv {
+    margin-top: 25px;
+}
+
+#projectrequirementsdiv {
+    margin-top: 25px;
+}
+
+#projectRequirementsTextArea {
+    width: 250px;
+    height: 80px;
+}
+
+#projectcreatordiv {
+    margin-top: 25px;
+}
+
+#projectpickdatediv {
+    margin-top: 25px;
+}
+
+#submitdiv {
+    margin-top: 25px;
+}
+
+p {
+    padding: 0 0 20px 0;
+    line-height: 1.7em;
+    text-align: center;
+    font-size: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font: normal 175% 'century gothic', arial, sans-serif;
+    color: #43423F;
+    margin: 0 0 15px 0;
+    padding: 15px 0 5px 0;
+}
+
+h2 {
+    font: normal 175% 'century gothic', arial, sans-serif;
+    color: #1293EE;
+}
+
+h4, h5, h6 {
+    margin: 0;
+    padding: 0 0 5px 0;
+    font: normal 120% arial, sans-serif;
+    color: #1293EE;
+}
+
+h5, h6 {
+    font: italic 95% arial, sans-serif;
+    padding: 0 0 15px 0;
+    color: #000;
+}
+
+h6 {
+    color: #362C20;
+}
+
+a, a:hover {
+    outline: none;
+    text-decoration: underline;
+    color: #F05A00;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+.left {
+    float: left;
+    width: auto;
+    margin-right: 10px;
+}
+
+.right {
+    float: right;
+    width: auto;
+    margin-left: 10px;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 10px 20px 0 20px;
+    border: 1px solid #E5E5DB;
+    background: #FFF;
+}
+
+ul {
+    margin: 2px 0 22px 17px;
+}
+
+    ul li {
+        list-style-type: circle;
+        margin: 0 0 6px 0;
+        padding: 0 0 4px 5px;
+    }
+
+ol {
+    margin: 8px 0 22px 20px;
+}
+
+    ol li {
+        margin: 0 0 11px 0;
+    }
+
+#main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main, #logo, #menubar, #site_content, #footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#header {
+    background: #F79F00;
+    height: 240px;
+}
+
+#logo {
+    width: 825px;
+    position: relative;
+    height: 168px;
+    background: #F79F00 url(logo.png) no-repeat;
+}
+
+    #logo #logo_text {
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+
+    #logo h1, #logo h2 {
+        font: normal 300% 'century gothic', arial, sans-serif;
+        border-bottom: 0;
+        text-transform: none;
+        margin: 0;
+    }
+
+#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover {
+    padding: 22px 0 0 0;
+    color: #FFF;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+    #logo_text h1 a .logo_colour {
+        color: #F05A00;
+    }
+
+#logo_text h2 {
+    font-size: 100%;
+    padding: 4px 0 0 0;
+    color: #FFF;
+}
+
+#menubar {
+    width: 877px;
+    height: 72px;
+    padding: 0;
+    background: #DE8F00 url(menu.png) repeat-x;
+}
+
+ul#menu, ul#menu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+    ul#menu li {
+        list-style: none;
+    }
+
+        ul#menu li a {
+            letter-spacing: 0.1em;
+            font: normal 100% 'lucida sans unicode', arial, sans-serif;
+            display: block;
+            float: left;
+            height: 37px;
+            padding: 29px 26px 6px 26px;
+            text-align: center;
+            color: #FFF;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: transparent;
+        }
+
+#content {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+    #content ul {
+        margin: 2px 0 22px 0px;
+    }
+
+        #content ul li {
+            list-style-type: none;
+            background: url(bullet.png) no-repeat;
+            margin: 0 0 6px 0;
+            padding: 0 0 4px 25px;
+            line-height: 1.5em;
+        }
+
+
+#colours {
+    height: 0px;
+    text-align: right;
+    padding: 66px 16px 0px 300px;
+}
+
+.form_settings {
+    margin: 15px 0 0 0;
+}
+
+    .form_settings p {
+        padding: 0 0 4px 0;
+    }
+
+    .form_settings span {
+        float: left;
+        width: 200px;
+        text-align: left;
+    }
+    
+
+table {
+    margin: 10px 0 30px 0;
+}
+
+    table tr th, table tr td {
+        background: #3B3B3B;
+        color: #FFF;
+        padding: 7px 4px;
+        text-align: left;
+    }
+
+    table tr td {
+        background: #F0EFE2;
+        color: #47433F;
+        border-top: 1px solid #FFF;
+    }

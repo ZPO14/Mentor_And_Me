@@ -1,0 +1,62 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Mentor&Me - CreateEvent</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1><a href="index.html">Mentor<span class="logo_colour">&Me</span></a></h1>
+                </div>
+            </div>
+            <div id="menubar">
+                <ul id="menu">
+                    <li><a href="index.html">Projects</a></li>
+                    <li class="selected"><a href="Create.html">Create</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Essentially these all need to be thrown into an array or a list through javascript with an "onClick", this array will be directed to the table on the home page and the details page that the project hyperlink will lead to -->
+            <div id="projectcreation">
+                <div id="projectnamediv">
+                    Project name:<br> <input type="text" id="projectNameTextBox"><br>
+                </div>
+                <div id="projectcreatordiv">
+                    Project creator: <br> <input type="text" id="projectCreatorTextBox"><br>
+                </div>
+                <div id="projectdesciptiondiv">
+                    Project desciption:<br> <textarea wrap="soft" id="projectDesciptionTextArea"></textarea><br>
+                </div>
+                <div id="projectsizediv">
+                    Project size: <br> <input list="SizeList" type="text" id="projectSizeTextBox">
+                    <datalist id="SizeList">
+                        <option> Small</option>
+                        <option> Meduim</option>
+                        <option> Large</option>
+                    </datalist>
+                </div>
+                <br>
+                <div id="projectrequirementsdiv">
+                    Project requirements: <br> <textarea id="projectRequirementsTextArea"></textarea><br>
+                </div>
+                <div id="projectpickdatediv">
+                    Application end date:<br> <input type="date" id="projectpickdate">
+                </div>
+                <div id=submitdiv>
+                    <input type="submit" id="submitbutton">
+                </div>
+            </div>
+            <div id="content_footer"></div><br><br><br><br><br><br>
+</body>
+</html>
