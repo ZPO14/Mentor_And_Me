@@ -41,9 +41,9 @@ namespace Mentor_And_Me
                 row.Cells.Add(cell1);
                 row.Cells.Add(cell2);
                 row.Cells.Add(cell3);
-                cell1.Text = "Project Title";
-                cell2.Text = Convert.ToString(A());
-                cell3.Text = Convert.ToString(SqlTableLength());
+                cell1.Text = Convert.ToString(sqlProjectName(i));
+                cell2.Text = Convert.ToString(sqlProjectSize(i));
+                cell3.Text = Convert.ToString(sqlProjectCreator(i));
             }
 
             
@@ -68,22 +68,118 @@ namespace Mentor_And_Me
             return count;
         }
 
-        public static int A()
+        public string sqlProjectName(int number)
         {
+            int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "Select * from projecttest where id = {number}";
-            int row = 0;
+            string stmt = "SELECT name From projecttest WHERE projectid =" + Convert.ToString(num);
+            string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
             {
                 using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
                 {
                     thisconnection.Open();
-                    row = (int)cmd.ExecuteScalar();
+                    cell = (string)cmd.ExecuteScalar();
                 }
-                
+
             }
-            return row;
+            return cell;
+        }
+
+        public string sqlProjectCreator(int number)
+        {
+            int num = number;
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "SELECT creator From projecttest WHERE projectid =" + Convert.ToString(num);
+            string cell;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    cell = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            return cell;
+        }
+
+        public string sqlProjectDesciption(int number)
+        {
+            int num = number;
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "SELECT desription From projecttest WHERE projectid =" + Convert.ToString(num);
+            string cell;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    cell = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            return cell;
+        }
+
+        public string sqlProjectSize(int number)
+        {
+            int num = number;
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "SELECT size From projecttest WHERE projectid =" + Convert.ToString(num);
+            string cell;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    cell = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            return cell;
+        }
+
+        public string sqlProjectRequirements(int number)
+        {
+            int num = number;
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "SELECT requirements From projecttest WHERE projectid =" + Convert.ToString(num);
+            string cell;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    cell = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            return cell;
+        }
+
+        public string sqlProjectDate(int number)
+        {
+            int num = number;
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "SELECT date From projecttest WHERE projectid =" + Convert.ToString(num);
+            string cell;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    cell = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            return cell;
         }
 
     }
