@@ -29,10 +29,6 @@
                 <RowStyle Font-Names="Century Gothic" ForeColor="#666666" />
             </asp:GridView>
 
-
-
-
-
         </div>
         </div>
     </form>

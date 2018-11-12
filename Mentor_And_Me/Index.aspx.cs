@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+//these three last using statements are needed to work with the database
 
 namespace Mentor_And_Me
 {
@@ -15,8 +16,6 @@ namespace Mentor_And_Me
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
             string sqlSelect = "select name, size, creator from projecttest";
 
@@ -27,12 +26,9 @@ namespace Mentor_And_Me
             SqlDataReader rd = sqlCommand.ExecuteReader();
 
 
-          
-
+            //this loops through and prints a new row for the main table from the database
             for(int i = 1; i <= SqlTableLength(); i++)
             {
-                
-
                 TableRow row = new TableRow();
                 testtable.Rows.Add(row);
                 TableCell cell1 = new TableCell();
@@ -45,12 +41,11 @@ namespace Mentor_And_Me
                 cell2.Text = Convert.ToString(sqlProjectSize(i));
                 cell3.Text = Convert.ToString(sqlProjectCreator(i));
             }
-
-            
-
+           
             sqlConnection.Close();
         }
 
+        //method to grab the length of the table
         public int SqlTableLength()
         {
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
@@ -68,6 +63,7 @@ namespace Mentor_And_Me
             return count;
         }
 
+        //methods to grab the specific value from the database
         public string sqlProjectName(int number)
         {
             int num = number;

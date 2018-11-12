@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Mentor_And_Me.WebForm2" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Mentor_And_Me.WebForm2" %>
 
 <!DOCTYPE HTML>
 <html>
@@ -25,7 +25,7 @@
             <div id="menubar">
                 <ul id="menu">
                     <li class="selected"><a href="index.html">Projects</a></li>
-                    <li><a href="create.html">Create</a></li>
+                    <li><a href="Create.aspx">Create</a></li>
                     <li><a href="chat.html">Chat</a></li>
                     <li><a href="login.html">Login</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -36,9 +36,8 @@
         
             <div id="content">
                 <h1>Welcome to Mentor&Me this is where you can start applying to other company projects</h1>
-                <!-- My thought is that this table should be loaded by an array or a list that populates the rows -->
 
-                <table id="projecttable" style="width:100%; border-spacing:0; clip: rect(auto, auto, auto, auto);">
+                <%--<table id="projecttable" style="width:100%; border-spacing:0; clip: rect(auto, auto, auto, auto);">
                     <tr>
                         <th>Project Name</th>
                         <th>Size</th>
@@ -52,8 +51,8 @@
                     <tr>
                         <td><a>Debugging of outsourced application</a></td>
                         <td>Medium</td>
-                        <td>James Brown</td>
                     </tr>
+                        <td>James Brown</td>
                     <tr>
                         <td><a>Event set up for manager conference</a></td>
                         <td>Small</td>
@@ -69,7 +68,7 @@
                         <td>Large</td>
                         <td>Christine Schollz</td>
                     </tr>
-                </table>
+                </table>--%>
             </div>
 
             <asp:SqlDataSource ID="userData" runat="server"
@@ -78,7 +77,7 @@
                 SelectCommand="Select * from projecttest">
             </asp:SqlDataSource>
         
-        <asp:Table ID="testtable" runat="server" Width="75%">
+        <asp:Table ID="testtable" runat="server"> 
             <asp:TableRow>
                 <asp:TableCell>Project Name</asp:TableCell>
                 <asp:TableCell>Size</asp:TableCell>
@@ -86,8 +85,9 @@
             </asp:TableRow>
         </asp:Table>
 
-    </div
+    </div>
+ </form>
 </body>
-    </form>
+    
 
 </html>

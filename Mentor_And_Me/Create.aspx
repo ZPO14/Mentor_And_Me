@@ -1,4 +1,6 @@
-﻿<!DOCTYPE HTML>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Create.aspx.cs" Inherits="Mentor_And_Me.WebForm1" %>
+
+<!DOCTYPE HTML>
 <html>
 
 <head>
@@ -10,6 +12,7 @@
 </head>
 
 <body>
+    <form id="form1" runat="server">
     <div id="main">
         <div id="header">
             <div id="logo">
@@ -19,7 +22,7 @@
             </div>
             <div id="menubar">
                 <ul id="menu">
-                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="Index.aspx">Projects</a></li>
                     <li class="selected"><a href="Create.html">Create</a></li>
                     <li><a href="chat.html">Chat</a></li>
                     <li><a href="login.html">Login</a></li>
@@ -30,33 +33,46 @@
             <!-- Essentially these all need to be thrown into an array or a list through javascript with an "onClick", this array will be directed to the table on the home page and the details page that the project hyperlink will lead to -->
             <div id="projectcreation">
                 <div id="projectnamediv">
-                    Project name:<br> <input type="text" id="projectNameTextBox"><br>
+                    Project name:<br> 
+                    <asp:TextBox ID="nameTextBox" runat="server" Height="17px"></asp:TextBox>
+                    <br>
                 </div>
                 <div id="projectcreatordiv">
-                    Project creator: <br> <input type="text" id="projectCreatorTextBox"><br>
+                    Project creator: <br> 
+                    <asp:TextBox ID="creatorTextBox" runat="server"></asp:TextBox>
+                    <br>
                 </div>
                 <div id="projectdesciptiondiv">
-                    Project desciption:<br> <textarea wrap="soft" id="projectDesciptionTextArea"></textarea><br>
+                    Project desciption:<br> 
+                    <asp:TextBox ID="descriptionTextBox" runat="server" Height="158px" Width="463px"></asp:TextBox>
+                    <br>
                 </div>
                 <div id="projectsizediv">
-                    Project size: <br> <input list="SizeList" type="text" id="projectSizeTextBox">
-                    <datalist id="SizeList">
-                        <option> Small</option>
-                        <option> Meduim</option>
+                    Project size: <br> 
+                    <asp:TextBox ID="sizeTextBox" runat="server"></asp:TextBox>
+                    &nbsp;<datalist id="SizeList">
+                        <option>Small</option>
+                        <option> Medium</option> 
                         <option> Large</option>
                     </datalist>
                 </div>
                 <br>
                 <div id="projectrequirementsdiv">
-                    Project requirements: <br> <textarea id="projectRequirementsTextArea"></textarea><br>
+                    Project requirements: <br> 
+                    <asp:TextBox ID="requirementsTextBox" runat="server"></asp:TextBox>
+                    <br>
                 </div>
                 <div id="projectpickdatediv">
-                    Application end date:<br> <input type="date" id="projectpickdate">
+                    Application end date:<br> &nbsp;<asp:TextBox ID="dateTextBox" runat="server" Height="98px" Width="305px"></asp:TextBox>
                 </div>
                 <div id=submitdiv>
-                    <input type="submit" id="submitbutton">
+                    &nbsp;<asp:Button ID="createButton" runat="server" OnClick="createButton_Click" Text="Create" />
                 </div>
             </div>
             <div id="content_footer"></div><br><br><br><br><br><br>
+            </div>
+
+    </div>
+    </form>
 </body>
 </html>
