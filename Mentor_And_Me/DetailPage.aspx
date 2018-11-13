@@ -87,7 +87,23 @@
        
         <asp:RadioButton ID="RadioButton9" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
         Deny<br />
-        <br /> </div>
+            <br />
+        <br /> 
+            <asp:Label ID="nameLabel" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Label ID="creatoLabel" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Label ID="descriptionLabel" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Label ID="sizeLabel" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Label ID="requirementsLabel" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Label ID="dateLabel" runat="server" Text="Label"></asp:Label>
+            <br />
+            <br />
+            <br />
+        </div>
     </form>
 </body>
 </html>

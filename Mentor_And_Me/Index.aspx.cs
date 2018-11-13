@@ -25,21 +25,29 @@ namespace Mentor_And_Me
 
             SqlDataReader rd = sqlCommand.ExecuteReader();
 
-
+            
             //this loops through and prints a new row for the main table from the database
-            for(int i = 1; i <= SqlTableLength(); i++)
+            for (int i = 1; i <= SqlTableLength(); i++)
             {
+                Button viewButton = new Button();
+                viewButton.Text = "View";
+                viewButton.CommandArgument = i.ToString();
+                viewButton.Click += viewButton_Click;
+
                 TableRow row = new TableRow();
                 testtable.Rows.Add(row);
                 TableCell cell1 = new TableCell();
                 TableCell cell2 = new TableCell();
                 TableCell cell3 = new TableCell();
+                TableCell cell4 = new TableCell();
                 row.Cells.Add(cell1);
                 row.Cells.Add(cell2);
                 row.Cells.Add(cell3);
-                cell1.Text = Convert.ToString(sqlProjectName(i));
-                cell2.Text = Convert.ToString(sqlProjectSize(i));
-                cell3.Text = Convert.ToString(sqlProjectCreator(i));
+                row.Cells.Add(cell4);
+                cell1.Controls.Add(viewButton); 
+                cell2.Text = Convert.ToString(sqlProjectName(i));
+                cell3.Text = Convert.ToString(sqlProjectSize(i));
+                cell4.Text = Convert.ToString(sqlProjectCreator(i));
             }
            
             sqlConnection.Close();
@@ -178,9 +186,37 @@ namespace Mentor_And_Me
             return cell;
         }
 
+        public string sqlProjectId(int number)
+        {
+            int num = number;
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "SELECT projectid From projecttest WHERE projectid =" + Convert.ToString(num);
+            string cell;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    cell = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            return cell;
+        }
+
         protected void detailBtn_Click(object sender, EventArgs e)
         {
            
         }
+
+        protected void viewButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Console.WriteLine(button.CommandArgument);
+
+            Response.Redirect("DetailPage.aspx?value=" + (button.CommandArgument));        
+        }
+      
     }
 }

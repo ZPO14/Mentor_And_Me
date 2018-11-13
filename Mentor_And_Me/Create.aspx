@@ -59,11 +59,11 @@
                 <br>
                 <div id="projectrequirementsdiv">
                     Project requirements: <br> 
-                    <asp:TextBox ID="requirementsTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="requirementsTextBox" runat="server" Height="97px" Width="389px"></asp:TextBox>
                     <br>
                 </div>
                 <div id="projectpickdatediv">
-                    Application end date:<br> &nbsp;<asp:TextBox ID="dateTextBox" runat="server" Height="98px" Width="305px"></asp:TextBox>
+                    Application end date:<br> &nbsp;<asp:TextBox ID="dateTextBox" runat="server" Height="19px" Width="125px"></asp:TextBox>
                 </div>
                 <div id=submitdiv>
                     &nbsp;<asp:Button ID="createButton" runat="server" OnClick="createButton_Click" Text="Create" />

@@ -87,9 +87,10 @@
             padding-bottom:50px;" Height="44px"> 
 
             <asp:TableRow>
-               <asp:TableCell>Project Name <asp:RadioButton ID="RadioButton1" runat="server" /> <a href="DetailPage.aspx">Project Details</a> </asp:TableCell>
-                <asp:TableCell>Size</asp:TableCell>
-                <asp:TableCell>Creator</asp:TableCell>
+                <asp:TableHeaderCell></asp:TableHeaderCell>
+               <asp:TableHeaderCell>Project Name <asp:RadioButton ID="RadioButton1" runat="server" /> <a href="DetailPage.aspx">Project Details</a> </asp:TableHeaderCell>
+                <asp:TableHeaderCell>Size</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Creator</asp:TableHeaderCell>
             </asp:TableRow>
         </asp:Table>
 
