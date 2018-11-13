@@ -77,9 +77,17 @@
                 SelectCommand="Select * from projecttest">
             </asp:SqlDataSource>
         
-        <asp:Table ID="testtable" runat="server"> 
+        <asp:Button ID="detailBtn" runat="server" OnClick="detailBtn_Click" Text="Details" />
+      
+        
+        <asp:Table ID="testtable" runat="server"
+            style="
+            padding-left:50px;
+            padding-right:50px;
+            padding-bottom:50px;" Height="44px"> 
+
             <asp:TableRow>
-                <asp:TableCell>Project Name</asp:TableCell>
+               <asp:TableCell>Project Name <asp:RadioButton ID="RadioButton1" runat="server" /> <a href="DetailPage.aspx">Project Details</a> </asp:TableCell>
                 <asp:TableCell>Size</asp:TableCell>
                 <asp:TableCell>Creator</asp:TableCell>
             </asp:TableRow>

@@ -178,5 +178,9 @@ namespace Mentor_And_Me
             return cell;
         }
 
+        protected void detailBtn_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -336,3 +336,16 @@ table {
         color: #47433F;
         border-top: 1px solid #FFF;
     }
+#content_footer{
+    font-family: serif;
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: center;
+}
+.projDetails{
+    padding:50px 50px 60px 60px;
+    border-bottom:groove;
+    border-top:groove;
+    border-left:groove;
+    border-right:groove;
+}

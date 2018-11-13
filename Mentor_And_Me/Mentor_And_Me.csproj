@@ -116,6 +116,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="databaseTest.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DetailPage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPage.aspx.cs">
+      <DependentUpon>DetailPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailPage.aspx.designer.cs">
+      <DependentUpon>DetailPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
