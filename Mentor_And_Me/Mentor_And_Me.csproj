@@ -129,6 +129,9 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Create.aspx" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\mentor.jpg" />
+    <Content Include="Images\synergy.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="ApplyPage.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

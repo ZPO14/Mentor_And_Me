@@ -9,7 +9,12 @@
     <meta name="description" content="website description" />
     <meta name="keywords" content="website keywords, website keywords" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-    <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="./Style/Style.css" title="style" />
+    <style type="text/css">
+        .auto-style1 {
+            font-size: x-small;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,10 +29,10 @@
             </div>
             <div id="menubar">
                 <ul id="menu">
-                    <li class="selected"><a href="index.html">Projects</a></li>
-                    <li><a href="Create.aspx">Create</a></li>
-                    <li><a href="chat.html">Chat</a></li>
                     <li><a href="login.html">Login</a></li>
+                    <li><a href="Create.aspx">Create</a></li>
+                    <li class="selected"><a href="index.aspx">Projects</a></li>               
+                    <li><a href="chat.html">Chat</a></li>                  
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -35,7 +40,7 @@
 
         
             <div id="content">
-                <h1>Welcome to Mentor&Me this is where you can start applying to other company projects</h1>
+                <h1><strong>Welcome to Mentor&Me this is where you can start applying to other company projects</strong></h1>
 
                 <%--<table id="projecttable" style="width:100%; border-spacing:0; clip: rect(auto, auto, auto, auto);">
                     <tr>
@@ -84,7 +89,8 @@
             style="
             padding-left:50px;
             padding-right:50px;
-            padding-bottom:50px;" Height="44px"> 
+            padding-bottom:50px;
+            Height: 44px;"> 
 
             <asp:TableRow>
                 <asp:TableHeaderCell></asp:TableHeaderCell>
@@ -94,7 +100,14 @@
             </asp:TableRow>
         </asp:Table>
 
-    </div>
+    </div>  
+         <footer>
+                    
+                    <h2 class="auto-style1">&copy; 2018, Synergy Scrum Corporation, LLC</h2>
+		<p class="auto-style1">All Rights Reseved. Contents pertaining this app must not be shared or reproduced without prior authorization.<br/>
+		Please  <a href="./Contact.aspx">contact</a> us for more information.</p>
+
+        </footer>
  </form>
 </body>
     

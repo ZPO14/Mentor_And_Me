@@ -6,7 +6,7 @@
     <meta name="description" content="website description" />
     <meta name="keywords" content="website keywords, website keywords" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-    <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="./Style/Style.css" title="style" />
 </head>
 <script>
     window.onload = function () {
@@ -17,7 +17,7 @@
         var Username = document.getElementById("username").value;
 
         var output = document.getElementsByClassName("outputArea");
-        output[0].innerHTML = Username + " " + " You already sign in ! ";
+        output[0].innerHTML = Username + " " + " You already signed in ! ";
     }
 
 
@@ -32,10 +32,10 @@
             </div>
             <div id="menubar">
                 <ul id="menu">
-                    <li><a href="index.html">Projects</a></li>
-                    <li><a href="create.html">Create</a></li>
-                    <li><a href="chat.html">Chat</a></li>
                     <li class="selected"><a href="Login.html">Login</a></li>
+                    <li><a href="Create.aspx">Create</a></li>
+                    <li><a href="Index.aspx">Projects</a></li>                  
+                    <li><a href="chat.html">Chat</a></li>                  
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
