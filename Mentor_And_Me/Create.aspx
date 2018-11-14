@@ -8,7 +8,7 @@
     <meta name="description" content="website description" />
     <meta name="keywords" content="website keywords, website keywords" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-    <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="./Style/Style.css" title="style" />
 </head>
 
 <body>
@@ -22,10 +22,10 @@
             </div>
             <div id="menubar">
                 <ul id="menu">
-                    <li><a href="Index.aspx">Projects</a></li>
-                    <li class="selected"><a href="Create.html">Create</a></li>
-                    <li><a href="chat.html">Chat</a></li>
                     <li><a href="login.html">Login</a></li>
+                    <li class="selected"><a href="Create.aspx">Create</a></li>
+                    <li><a href="Index.aspx">Projects</a></li>                  
+                    <li><a href="chat.html">Chat</a></li>                    
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -73,6 +73,12 @@
             </div>
 
     </div>
+
     </form>
+    <footer>
+        © 2018, Synergy Scrum Corporation, LLC
+All Rights Reseved. Contents pertaining this app must not be shared or reproduced without prior authorization.
+Please contact us for more information.</footer>
+
 </body>
 </html>

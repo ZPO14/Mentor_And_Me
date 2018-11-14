@@ -14,81 +14,15 @@
     <form id="form1" runat="server">
         <div id="menubar">
                 <ul id="menu">
-                    <li><a href="Index.aspx">Projects</a></li>
-                    <li class="selected"><a href="Create.html">Create</a></li>
-                    <li><a href="chat.html">Chat</a></li>
                     <li><a href="login.html">Login</a></li>
+                    <li class="selected"><a href="Create.aspx">Create</a></li>
+                    <li><a href="Index.aspx">Projects</a></li>                 
+                    <li><a href="chat.html">Chat</a></li>                  
                     <li><a href="contact.html">Contact Us</a></li>
                    </ul>
             </div>
         <div class="projDetails">          
-            <em>          
-            <asp:Label ID="Label1" runat="server" Text="Project Name:Debugging of outsourced Application"></asp:Label>
-            </em>
             <br />
-            <br />
-            <strong>The total project will eliminate the unnecessary quota strategy <br />
-            along with the superficial cost that wasn't accounted for previously.<br />
-            This project requires exceptional mental stability and physical<br />
-            endurance. </strong>
-            <br />
-            <br />   
-            
-       
-       
-        <asp:RadioButton ID="RadioButton2" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        <asp:Label ID="Label2" runat="server" Text="Accept"></asp:Label>
-&nbsp;&nbsp;
-       
-        <asp:RadioButton ID="RadioButton6" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        Deny<br />
-            <asp:Button ID="submitBtn" runat="server" OnClick="submitBtn_Click" Text="Submit" />
-            <br />
-        <br />
-        <div>          
-            <asp:Label ID="Label3" runat="server" Text="Project Name:New web feature in company website"></asp:Label>
-
-
-            <br />
-            <br />          
-        </div>
-       
-        <asp:RadioButton ID="RadioButton3" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        <asp:Label ID="Label4" runat="server" Text="Accept"></asp:Label>
-&nbsp;&nbsp;
-       
-        <asp:RadioButton ID="RadioButton7" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        Deny<br />
-        <br />
-        <div>          
-            <asp:Label ID="Label5" runat="server" Text="Project Name:Event set up for manager conference"></asp:Label>
-            <br />
-            <br />
-            <br />          
-        </div>
-       
-        <asp:RadioButton ID="RadioButton4" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        <asp:Label ID="Label6" runat="server" Text="Accept"></asp:Label>
-&nbsp;&nbsp;
-       
-        <asp:RadioButton ID="RadioButton8" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        Deny<br />
-        <br />
-        <div>          
-            <asp:Label ID="Label7" runat="server" Text="Project Name:Lunch in with higher executives"></asp:Label>
-            <br />
-            <br />
-            <br />         
-        </div>
-       
-        <asp:RadioButton ID="RadioButton5" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        <asp:Label ID="Label8" runat="server" Text="Accept"></asp:Label>
-&nbsp;&nbsp;
-       
-        <asp:RadioButton ID="RadioButton9" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
-        Deny<br />
-            <br />
-        <br /> 
             <asp:Label ID="nameLabel" runat="server" Text="Label"></asp:Label>
             <br />
             <asp:Label ID="creatoLabel" runat="server" Text="Label"></asp:Label>
@@ -101,9 +35,30 @@
             <br />
             <asp:Label ID="dateLabel" runat="server" Text="Label"></asp:Label>
             <br />
+            <br />   
+            
+       
+       
+        <asp:RadioButton ID="aceptRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
+        <asp:Label ID="Label2" runat="server" Text="Accept"></asp:Label>
+&nbsp;&nbsp;
+       
+        <asp:RadioButton ID="denyRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
+        Deny<br />
+            <asp:Button ID="submitBtn" runat="server" OnClick="submitBtn_Click" Text="Submit" />
+            <br />
+        <br />
+            <br />
+            <br />
+        <br /> 
+            <br />
             <br />
             <br />
         </div>
     </form>
+    <footer>© 2018, Synergy Scrum Corporation, LLC
+All Rights Reseved. Contents pertaining this app must not be shared or reproduced without prior authorization.
+Please contact us for more information.</footer>
+
 </body>
 </html>
