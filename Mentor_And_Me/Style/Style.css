@@ -10,12 +10,11 @@
 body {
     font: normal .80em 'trebuchet ms', arial, sans-serif;
     height: 130%;
-    background-image: url(../Images/synergy.jpg);
+    background-color: #ffb366;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    padding:10px,200px,10px,200px;
+    padding: 10px,200px,10px,200px;
 }
 
 .contentContainer {
