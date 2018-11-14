@@ -130,6 +130,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Create.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="ApplyPage.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.html" />
     <Content Include="Projects.html" />
@@ -246,6 +247,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyPage.aspx.cs">
+      <DependentUpon>ApplyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplyPage.aspx.designer.cs">
+      <DependentUpon>ApplyPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

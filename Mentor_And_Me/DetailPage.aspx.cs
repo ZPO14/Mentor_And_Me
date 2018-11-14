@@ -23,8 +23,6 @@ namespace Mentor_And_Me
             sizeLabel.Text = sqlProjectSize(dataId).ToString();
             requirementsLabel.Text = sqlProjectRequirements(dataId).ToString();
             dateLabel.Text = sqlProjectDate(dataId).ToString();
-
-
         }
 
         protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
@@ -41,7 +39,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT name From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT name From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -60,7 +58,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT creator From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT creator From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -79,7 +77,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT desciption From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT desciption From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -98,7 +96,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT size From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT size From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -117,7 +115,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT requirements From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT requirements From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -136,7 +134,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT date From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT date From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -155,7 +153,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT projectid From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT projectid From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -168,6 +166,16 @@ namespace Mentor_And_Me
 
             }
             return cell;
+        }
+
+        protected void applyButton_Command(object sender, CommandEventArgs e)
+        {
+
+        }
+
+        protected void applyButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

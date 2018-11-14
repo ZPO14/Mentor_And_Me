@@ -19,12 +19,11 @@ namespace Mentor_And_Me
           
         }
 
-
         protected void createButton_Click(object sender, EventArgs e)
         {
-
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string sqlSelect = "insert into projecttest(userid, name, creator, desciption, size, requirements, date) values (@pid, @pname, @pcre, @pdesc, @psize, @preq, @pdate)";
+            //string sqlSelect = "insert into projecttest(userid, name, creator, desciption, size, requirements, date) values (@pid, @pname, @pcre, @pdesc, @psize, @preq, @pdate)";
+            string sqlSelect = "insert into project(userid, name, creator, desciption, size, requirements, date) values (@pid, @pname, @pcre, @pdesc, @psize, @preq, @pdate)";
 
             SqlConnection sqlConnection = new SqlConnection(sqlConnectString);
             SqlCommand sqlCommand = new SqlCommand(sqlSelect, sqlConnection);
@@ -60,9 +59,6 @@ namespace Mentor_And_Me
             sizeTextBox.Text = "";
             requirementsTextBox.Text = "";
             dateTextBox.Text = "";
-            //userView.DataBind();
-
-            //Move values to database on click
         }
     }
 }

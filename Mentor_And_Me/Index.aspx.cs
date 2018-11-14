@@ -76,7 +76,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT name From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT name From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -95,7 +95,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT creator From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT creator From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -114,7 +114,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT desription From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT desription From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -133,7 +133,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT size From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT size From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -152,7 +152,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT requirements From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT requirements From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -171,7 +171,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT date From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT date From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
