@@ -9,18 +9,22 @@
     <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
 </head>
 <script>
-  window.onload=function()
-{
+    window.onload = function () {
 
-  document.getElementById("sendButton").onclick=processForm;
-}
-function processForm()
-{
-  var ChatInput=document.getElementById("chatInput").value;
+        document.getElementById("sendButton").onclick = processForm;
+    }
+    function processForm() {
+        var ChatInput = document.getElementById("chatInput").value;
+        var div = document.createElement("div");
+        var text = document.createTextNode("I said" + " : " + ChatInput);
+        div.id = "appendedSchedule";
+        var h3 = document.createElement("h3");
+        h3.appendChild(text);
+        div.appendChild(h3);
 
- var output=document.getElementsByClassName("messagesPanel");
-  output[0].innerHTML="I said" + " : " +ChatInput;
-}
+
+        document.getElementById("messagesPanel").appendChild(div);
+    }
 
 
 </script>
