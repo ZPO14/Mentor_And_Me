@@ -39,11 +39,11 @@
             
        
        
-        <asp:RadioButton ID="aceptRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
+       <%-- <asp:RadioButton ID="aceptRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" /--%>>
         <asp:Label ID="Label2" runat="server" Text="Accept"></asp:Label>
 &nbsp;&nbsp;
        
-        <asp:RadioButton ID="denyRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />
+        <%--<asp:RadioButton ID="denyRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />--%>
         Deny<br />
             <asp:Button ID="submitBtn" runat="server" OnClick="submitBtn_Click" Text="Submit" />
             <br />

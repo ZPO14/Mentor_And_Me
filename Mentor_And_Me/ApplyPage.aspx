@@ -1,41 +1,58 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DetailPage.aspx.cs" Inherits="Mentor_And_Me.DetailPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApplyPage.aspx.cs" Inherits="Mentor_And_Me.ApplyPage" %>
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head>
     <title>Mentor&Me - CreateEvent</title>
     <meta name="description" content="website description" />
     <meta name="keywords" content="website keywords, website keywords" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-    <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
-    <style type="text/css">
-        .auto-style1 {
-            margin-bottom: 16;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./Style/Style.css" title="style" />
 </head>
+
 <body>
     <form id="form1" runat="server">
-        <div id="menubar">
-                <ul id="menu">
-                    <li><a href="Index.aspx">Projects</a></li>
-                    <li class="selected"><a href="Create.html">Create</a></li>
-                    <li><a href="chat.html">Chat</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                   </ul>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1><a href="index.html">Mentor<span class="logo_colour">&Me</span></a></h1>
+                </div>
             </div>
-        
-        <p>
-            <asp:TextBox ID="applicationBox" runat="server" CssClass="auto-style1" Height="186px" Width="337px"></asp:TextBox>
-        </p>
-        <p>
-            <asp:Label ID="Label1" runat="server" Text="Enter email: "></asp:Label>
-            <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
-            <asp:Button ID="submitButton" runat="server" Text="Submit" />
-        </p>
-        
+            <div id="menubar">
+                <ul id="menu">
+                    <li><a href="login.html">Login</a></li>
+                    <li class="selected"><a href="Create.aspx">Create</a></li>
+                    <li><a href="Index.aspx">Projects</a></li>                  
+                    <li><a href="chat.html">Chat</a></li>                    
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div id="projectnamediv">
+                    <br>&nbsp;</div>
+                <div id=submitdiv>
+                    &nbsp;</div>
+            </div>
+            <div id="content_footer"></div><br><br><br><br><br><br>
+            </div>
+
+    </div>
+
+    <footer>
+        © 2018, Synergy Scrum Corporation, LLC
+All Rights Reseved. Contents pertaining this app must not be shared or reproduced without prior authorization.
+Please contact us for more information.</footer>
+
+        <asp:TextBox ID="applyTextBox" runat="server" Height="19px"></asp:TextBox>
+        <br />
+        <br />
+        <asp:TextBox ID="contactTextbox" runat="server"></asp:TextBox>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <br />
+        <br />
+        <asp:Button ID="applyButton" runat="server" OnClick="applyButton_Click" Text="Submit Application!" />
+
     </form>
+    
 </body>
 </html>

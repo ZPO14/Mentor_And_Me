@@ -23,18 +23,25 @@ namespace Mentor_And_Me
             sizeLabel.Text = sqlProjectSize(dataId).ToString();
             requirementsLabel.Text = sqlProjectRequirements(dataId).ToString();
             dateLabel.Text = sqlProjectDate(dataId).ToString();
+
+
+            submitBtn.CommandArgument = dataId.ToString();
+            submitBtn.Click += submitBtn_Click;
         }
 
-        protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
+        //protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         protected void submitBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Chat.html");
+            Button button = (Button)sender;
+            Console.WriteLine(button.CommandArgument);
 
+            Response.Redirect("ApplyPage.aspx?value=" + (button.CommandArgument));
         }
+
         public string sqlProjectName(int number)
         {
             int num = number;
@@ -173,9 +180,19 @@ namespace Mentor_And_Me
 
         }
 
-        protected void applyButton_Click(object sender, EventArgs e)
-        {
+        //protected void applyButton_Click(object sender, EventArgs e)
+        //{
             
-        }
+        //}
+
+        //protected void submitButton_Click(object sender, EventArgs e)
+        //{
+           
+        //}
+
+        //protected void emailTextBox_TextChanged(object sender, EventArgs e)
+        //{
+           
+        //}
     }
 }

@@ -17,7 +17,7 @@ namespace Mentor_And_Me
         protected void Page_Load(object sender, EventArgs e)
         {
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string sqlSelect = "select name, size, creator from projecttest";
+            string sqlSelect = "select name, size, creator from project";
 
             SqlConnection sqlConnection = new SqlConnection(sqlConnectString);
             SqlCommand sqlCommand = new SqlCommand(sqlSelect, sqlConnection);
@@ -57,7 +57,7 @@ namespace Mentor_And_Me
         public int SqlTableLength()
         {
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "Select count(*) from projecttest";
+            string stmt = "Select count(*) from project";
             int count = 0;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))

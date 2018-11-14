@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="ApplyPage.aspx" />
     <Content Include="Chat.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Contact.html" />
@@ -133,7 +134,6 @@
     <Content Include="Images\mentor.jpg" />
     <Content Include="Images\synergy.jpg" />
     <Content Include="Index.aspx" />
-    <Content Include="ApplyPage.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.html" />
     <Content Include="Projects.html" />
@@ -175,6 +175,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplyPage.aspx.cs">
+      <DependentUpon>ApplyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplyPage.aspx.designer.cs">
+      <DependentUpon>ApplyPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -250,13 +257,6 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ApplyPage.aspx.cs">
-      <DependentUpon>ApplyPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ApplyPage.aspx.designer.cs">
-      <DependentUpon>ApplyPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
