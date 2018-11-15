@@ -61,5 +61,10 @@ namespace Mentor_And_Me
             applyTextBox.Text = "";
             contactTextbox.Text = "";
         }
+
+        protected void applyTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

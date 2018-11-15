@@ -10,7 +10,7 @@
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
     <link rel="stylesheet" type="text/css" href="./Style/Style.css" title="style" />
 </head>
-<body>
+<body style="left: 176px; top: 0px; width: 887px">
     <form id="form1" runat="server">
         <div id="menubar">
                 <ul id="menu">
@@ -39,11 +39,13 @@
             
        
        
-       <%-- <asp:RadioButton ID="aceptRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" /--%>>
-        <asp:Label ID="Label2" runat="server" Text="Accept"></asp:Label>
+       <%-- <asp:RadioButton ID="aceptRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" /--%>
+            <asp:RadioButton ID="acceptRadioBtn" runat="server" />
+&nbsp;<asp:Label ID="Label2" runat="server" Text="Accept"></asp:Label>
 &nbsp;&nbsp;
        
         <%--<asp:RadioButton ID="denyRadioBtn" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" />--%>
+            <asp:RadioButton ID="denyRadioBtn" runat="server" />
         Deny<br />
             <asp:Button ID="submitBtn" runat="server" OnClick="submitBtn_Click" Text="Submit" />
             <br />

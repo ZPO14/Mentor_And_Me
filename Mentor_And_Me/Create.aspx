@@ -22,7 +22,7 @@
             </div>
             <div id="menubar">
                 <ul id="menu">
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="Login.aspx">Login</a></li>
                     <li class="selected"><a href="Create.aspx">Create</a></li>
                     <li><a href="Index.aspx">Projects</a></li>                  
                     <li><a href="chat.html">Chat</a></li>                    
