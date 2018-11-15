@@ -25,8 +25,8 @@
                     <li><a href="login.aspx">Login</a></li>
                     <li class="selected"><a href="Create.aspx">Create</a></li>
                     <li><a href="Index.aspx">Projects</a></li>                  
-                    <li><a href="chat.aspx">Chat</a></li>                    
-                    <li><a href="contact.aspx">Contact Us</a></li>
+                    <li><a href="Chat.html">Chat</a></li>                    
+                    <li><a href="Contact.html">Contact Us</a></li>
                 </ul>
             </div>
 
