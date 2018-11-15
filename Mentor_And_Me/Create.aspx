@@ -22,16 +22,16 @@
             </div>
             <div id="menubar">
                 <ul id="menu">
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="login.aspx">Login</a></li>
                     <li class="selected"><a href="Create.aspx">Create</a></li>
                     <li><a href="Index.aspx">Projects</a></li>                  
-                    <li><a href="chat.html">Chat</a></li>                    
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="chat.aspx">Chat</a></li>                    
+                    <li><a href="contact.aspx">Contact Us</a></li>
                 </ul>
             </div>
 
             <!-- Essentially these all need to be thrown into an array or a list through javascript with an "onClick", this array will be directed to the table on the home page and the details page that the project hyperlink will lead to -->
-            <div id="projectcreation">
+            <div id="projectcreation" style="padding-left: 200px;">
                 <div id="projectnamediv">
                     Project name:<br> 
                     <asp:TextBox ID="nameTextBox" runat="server" Height="17px"></asp:TextBox>
@@ -76,9 +76,7 @@
 
     </form>
     <footer>
-        © 2018, Synergy Scrum Corporation, LLC
-All Rights Reseved. Contents pertaining this app must not be shared or reproduced without prior authorization.
-Please contact us for more information.</footer>
+        © 2018, Synergy Scrum Corporation, LLC All Rights Reseved. Contents pertaining this app must not be shared or reproduced without prior authorization. Please contact us for more information.</footer>
 
 </body>
 </html>

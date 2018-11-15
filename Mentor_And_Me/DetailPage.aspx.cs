@@ -27,6 +27,9 @@ namespace Mentor_And_Me
 
             submitBtn.CommandArgument = dataId.ToString();
             submitBtn.Click += submitBtn_Click;
+
+            deleteButton.CommandArgument = dataId.ToString();
+            deleteButton.Click += deleteButton_Click;
         }
 
         //protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
@@ -37,8 +40,6 @@ namespace Mentor_And_Me
         protected void submitBtn_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            Console.WriteLine(button.CommandArgument);
-
             Response.Redirect("ApplyPage.aspx?value=" + (button.CommandArgument));
         }
 
@@ -84,7 +85,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT desciption From project WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT description From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -180,19 +181,45 @@ namespace Mentor_And_Me
 
         }
 
+        protected void deleteButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            sqlDeleteRow((Convert.ToInt32(button.CommandArgument)));
+        }
+
+        public string sqlDeleteRow(int number)
+        {
+            int num = number;
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "Delete From project WHERE projectid =" + Convert.ToString(num);
+            string cell;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmd = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    cell = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            return cell;
+        }
+
+
         //protected void applyButton_Click(object sender, EventArgs e)
         //{
-            
+
         //}
 
         //protected void submitButton_Click(object sender, EventArgs e)
         //{
-           
+
         //}
 
         //protected void emailTextBox_TextChanged(object sender, EventArgs e)
         //{
-           
+
         //}
     }
 }

@@ -27,27 +27,32 @@ namespace Mentor_And_Me
 
             
             //this loops through and prints a new row for the main table from the database
-            for (int i = 1; i <= SqlTableLength(); i++)
+            for (int i = 1; i <= SqlLastId(); i++)
             {
                 Button viewButton = new Button();
                 viewButton.Text = "View";
                 viewButton.CommandArgument = i.ToString();
                 viewButton.Click += viewButton_Click;
 
-                TableRow row = new TableRow();
-                testtable.Rows.Add(row);
-                TableCell cell1 = new TableCell();
-                TableCell cell2 = new TableCell();
-                TableCell cell3 = new TableCell();
-                TableCell cell4 = new TableCell();
-                row.Cells.Add(cell1);
-                row.Cells.Add(cell2);
-                row.Cells.Add(cell3);
-                row.Cells.Add(cell4);
-                cell1.Controls.Add(viewButton); 
-                cell2.Text = Convert.ToString(sqlProjectName(i));
-                cell3.Text = Convert.ToString(sqlProjectSize(i));
-                cell4.Text = Convert.ToString(sqlProjectCreator(i));
+                if (sqlProjectName(i) == null)
+                { }
+                else
+                {
+                    TableRow row = new TableRow();
+                    testtable.Rows.Add(row);
+                    TableCell cell1 = new TableCell();
+                    TableCell cell2 = new TableCell();
+                    TableCell cell3 = new TableCell();
+                    TableCell cell4 = new TableCell();
+                    row.Cells.Add(cell1);
+                    row.Cells.Add(cell2);
+                    row.Cells.Add(cell3);
+                    row.Cells.Add(cell4);
+                    cell1.Controls.Add(viewButton);
+                    cell2.Text = Convert.ToString(sqlProjectName(i));
+                    cell3.Text = Convert.ToString(sqlProjectSize(i));
+                    cell4.Text = Convert.ToString(sqlProjectCreator(i));
+                }
             }
            
             sqlConnection.Close();
@@ -70,6 +75,25 @@ namespace Mentor_And_Me
             }
             return count;
         }
+
+        public int SqlLastId()
+        {
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "Select max(projectid) from project";
+            int count = 0;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmdCount = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    count = (int)cmdCount.ExecuteScalar();
+                }
+            }
+            return count;
+        }
+
+
 
         //methods to grab the specific value from the database
         public string sqlProjectName(int number)
@@ -114,7 +138,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT desription From project WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT description From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
@@ -190,7 +214,7 @@ namespace Mentor_And_Me
         {
             int num = number;
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
-            string stmt = "SELECT projectid From projecttest WHERE projectid =" + Convert.ToString(num);
+            string stmt = "SELECT projectid From project WHERE projectid =" + Convert.ToString(num);
             string cell;
 
             using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))

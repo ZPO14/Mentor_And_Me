@@ -23,13 +23,18 @@ namespace Mentor_And_Me
         {
             string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
             //string sqlSelect = "insert into projecttest(userid, name, creator, desciption, size, requirements, date) values (@pid, @pname, @pcre, @pdesc, @psize, @preq, @pdate)";
-            string sqlSelect = "insert into project(userid, name, creator, desciption, size, requirements, date) values (@pid, @pname, @pcre, @pdesc, @psize, @preq, @pdate)";
+            string sqlSelect = "insert into project(projectid, userid, name, creator, description, size, requirements, date) values (@pid ,@uid, @pname, @pcre, @pdesc, @psize, @preq, @pdate)";
+            //string sqlFindId = "select max(projectid) from project";
 
             SqlConnection sqlConnection = new SqlConnection(sqlConnectString);
             SqlCommand sqlCommand = new SqlCommand(sqlSelect, sqlConnection);
+            //SqlCommand sqlCommand2 = new SqlCommand(sqlFindId, sqlConnection);
 
             sqlCommand.Parameters.Add("@pid", System.Data.SqlDbType.NVarChar);
-            sqlCommand.Parameters["@pid"].Value = 1;
+            sqlCommand.Parameters["@pid"].Value = (Convert.ToInt32(SqlLastId()) + 1);
+
+            sqlCommand.Parameters.Add("@uid", System.Data.SqlDbType.NVarChar);
+            sqlCommand.Parameters["@uid"].Value = 1;
 
             sqlCommand.Parameters.Add("@pname", System.Data.SqlDbType.NVarChar);
             sqlCommand.Parameters["@pname"].Value = nameTextBox.Text;
@@ -59,6 +64,26 @@ namespace Mentor_And_Me
             sizeTextBox.Text = "";
             requirementsTextBox.Text = "";
             dateTextBox.Text = "";
+
+
+            
+        }
+
+        public int SqlLastId()
+        {
+            string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            string stmt = "Select max(projectid) from project";
+            int count = 0;
+
+            using (SqlConnection thisconnection = new SqlConnection(sqlConnectString))
+            {
+                using (SqlCommand cmdCount = new SqlCommand(stmt, thisconnection))
+                {
+                    thisconnection.Open();
+                    count = (int)cmdCount.ExecuteScalar();
+                }
+            }
+            return count;
         }
     }
 }
