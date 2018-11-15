@@ -284,6 +284,7 @@ ul#menu, ul#menu li {
             text-transform: uppercase;
             text-decoration: none;
             background: transparent;
+            border-radius:20px;
             
         }
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApplyPage.aspx.cs" Inherits="Mentor_And_Me.ApplyPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApplyPage.aspx.cs" Inherits="Mentor_And_Me.ApplyPage" %>
 
 <!DOCTYPE HTML>
 <html>
@@ -22,7 +22,7 @@
             </div>
             <div id="menubar">
                 <ul id="menu">
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="Login.aspx">Login</a></li>
                     <li class="selected"><a href="Create.aspx">Create</a></li>
                     <li><a href="Index.aspx">Projects</a></li>                  
                     <li><a href="chat.html">Chat</a></li>                    
@@ -32,27 +32,31 @@
                     <br>&nbsp;</div>
                 <div id=submitdiv>
                     &nbsp;</div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <asp:TextBox ID="applyTextBox" runat="server" Height="19px" Width="261px"></asp:TextBox>
+        &nbsp; Enter First Name and Last Name<br />
+        <br />
+        <asp:TextBox ID="contactTextbox" runat="server"></asp:TextBox>
+        &nbsp;<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <br />
+        <br />
+        <asp:Button ID="applyButton" runat="server" OnClick="applyButton_Click" Text="Submit Application!" />
+
             </div>
             <div id="content_footer"></div><br><br><br><br><br><br>
             </div>
 
-    </div>
-
+    </div> </form>
     <footer>
-        © 2018, Synergy Scrum Corporation, LLC
+        � 2018, Synergy Scrum Corporation, LLC
 All Rights Reseved. Contents pertaining this app must not be shared or reproduced without prior authorization.
 Please contact us for more information.</footer>
 
-        <asp:TextBox ID="applyTextBox" runat="server" Height="19px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:TextBox ID="contactTextbox" runat="server"></asp:TextBox>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        <br />
-        <br />
-        <asp:Button ID="applyButton" runat="server" OnClick="applyButton_Click" Text="Submit Application!" />
-
-    </form>
-    
+       
 </body>
 </html>
